@@ -1,0 +1,45 @@
+body {
+    background-color: bisque;
+}
+.title {
+    /* background-color: aqua; */
+    width: min(100vw, 450px);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.palindrome-div {
+    background-color: white;
+    width: min(100vw, 270px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px 10px 10px;
+    box-shadow: 5px 5px 5px orange;
+}
+.palindrome-div input, .palindrome-div button {
+    max-width: 100%;
+    padding-bottom: 5px;
+}
+.palindrome-div label {
+    padding-top: 10px;
+}
+.palindrome-definition-div {
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+}
+.palindrome-definition {
+    background-color: rgb(55, 125, 17);
+    max-width: 250px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px 10px 10px;
+}

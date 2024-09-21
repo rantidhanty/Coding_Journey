@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title">Build a Survey Form</h1>
+            <p id="description">fill out the survey form below</p>
+        </header>
+        <form id="survey-form" value="survey">
+        <fieldset>
+            <legend>please fill out the survey</legend>
+            <label id="name-label">Name <input id="name" type="text" placeholder="enter your name" required /></label><br>
+            <label id="email-label">Email <input id="email" type="email" placeholder="enter your email" required /></label><br>
+            <label id="number-label">Age <input id="number" type="number" min="12" max="130" placeholder="age"/></label>
+        </fieldset>
+        <fieldset>
+            <legend>Are you very happy with this course?</legend>
+            <label><input id="rec" type="radio" name="account-type" value="Rcm" />Recomended
+            </label><br>
+            <label><input id="myb" type="radio" name="account-type" value="Maybe" />Maybe</label>
+        </fieldset>
+        <fieldset>
+            <legend>who are you?</legend>
+            <label>Please select
+                <select id="dropdown">
+                <option>(Select One)</option>
+                <option>student</option>
+                <option>otodidak</option>
+                </select>
+            </label>
+        </fieldset>
+        <legend>What will be discussed later?<br>*please choose more than one</legend>
+            <label>
+                <input type="checkbox" name="topic" value="framework" />Framework
+            </label>
+            <label>
+                <input type="checkbox" name="topic" value="library"/>Library
+            </label>
+            <label>
+                <input type="checkbox" name="topic" value="cyber" />Cyber Security
+            </label>
+
+            <label for="think">What do you think?
+                <textarea id="think" name="think" row="3" cols="30"> </textarea>
+            </label>
+            <input id="submit" type="submit" value="Submit"/>
+        </form>
+    </div>
+</body>
+</html>

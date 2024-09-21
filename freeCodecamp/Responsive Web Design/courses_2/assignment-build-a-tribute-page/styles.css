@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh; /* Atur ketinggian minimal untuk body agar footer tetap di bawah */
+    position: relative; /* Tambahkan position: relative untuk kontainer utama */
+  }
+  
+  main {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #c78383;
+    box-shadow: 5px 10px rgb(206, 100, 118);
+  }
+  
+  main > p {
+    text-align: center;
+  }
+  
+  #title {
+    text-align: center;
+    display: block;
+    margin-bottom: 0;
+  }
+  
+  #img-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #image {
+    display: block;
+    max-width: 100%;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  blockquote {
+    text-align: center;
+  }
+  
+  .closing {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  /* footer {
+    text-align: center;
+    padding-top: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  } */
