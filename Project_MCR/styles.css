@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(196, 237, 223);
+}
+.nav{
+    /* background-color: rgb(203, 203, 215); */
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+.nav li{
+    padding: 10px;
+    margin-right: 20px;
+}
+li:hover {
+    background-color: rgb(220, 220, 223);
+    box-shadow: 10px 5px 10px;
+    border-radius: 15px;
+}
+a {
+    text-decoration: none;
+}
+#logo {
+    height: 50px;
+    width: 120px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+.mcr{
+    /* background-color: aquamarine; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    margin-right: 250px;
+}
+h1, p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#Home{
+    /* background-color: rgb(221, 121, 21); */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.imghome {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;  
+    align-items: center; 
+    gap: 15px; 
+    flex-wrap: wrap; 
+}
+
+.imghome img {
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgb(131, 152, 98);
+    height: 150px; 
+    width: 150px; 
+    object-fit: cover; 
+    transition: transform 0.3s ease; 
+}
+
+.imghome img:hover {
+    transform: scale(1.1); 
+}
