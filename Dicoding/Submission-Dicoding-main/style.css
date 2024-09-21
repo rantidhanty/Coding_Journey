@@ -1,0 +1,275 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style untuk body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Style untuk navigasi */
+nav {
+    font-family:  "Times New Roman", Times, serif;
+    background-color: #ffa057;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 13%;
+    width: 100%;
+    z-index: 999;
+}
+
+.logo2 {
+    display: flex;
+    margin: 1px;
+    padding: 1px;
+    align-items: center;
+}
+.logo2 img{
+  border-radius: 25% 10%;
+}
+.logo2 h3 {
+    font-size: 30px;
+    margin-left: 20px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 28px;
+}
+
+nav ul li a {
+    color: #161515;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #47c022e3;
+}
+
+.tombol-menu {
+  display: none;
+}
+
+.garis {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px auto;
+  transition: background-color 0.3s ease;
+}
+
+.tombol-menu:hover .garis {
+  background-color: #47c022e3;
+}
+
+/* HOME */
+#home {
+    height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+  
+  #home img {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+  }
+  
+  .intro {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    color: #d3e0ae; 
+  }
+  
+  .intro h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
+  }
+  
+  .intro p {
+    font-size: 18px;
+    margin-bottom: 30px; 
+  }
+  
+  .intro button {
+    background-color: #a4caa7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .intro button:hover {
+    background-color: #a54963;
+  }
+ /* Style Fasilitas*/
+  #fasilitas {
+    padding: 0 50px;
+    scroll-margin-top: 100px;
+  }
+  #judul-fasilitas{
+    top: -100px;
+  }
+  #fasilitas h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 24px;
+  }
+  
+  #fasilitas .fasilitas-image {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+  }
+
+  #fasilitas > div {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 30px;
+  }
+
+  #fasilitas img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  #kegiatan {
+    padding: 0 50px;
+    scroll-margin-top: 100px;
+    text-align: justify;
+  }
+ 
+  #kegiatan h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  aside {
+    width: 40%;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+  }
+  
+  aside > p {
+    margin: 0.5rem;
+  }
+
+  #about{
+    padding: 0 50px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #about h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 24px;
+    color: #333;
+  }
+  #about .section-container {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+  #about h3{
+    text-align: justify;
+    font-size: x-large;
+    color: #333;
+  }
+  #about .misi ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+  #about section p{
+    text-align: justify;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  #about .misi p{
+    text-align: justify;
+    color: #555;
+  }
+  #about .misi ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+  #about  p{
+    text-align: justify;
+  }
+  footer {
+    background-color: #333; 
+    color: #fff; 
+    padding: 10px; 
+    text-align: center; 
+    bottom: 0; 
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .logo2 {
+      justify-content: center; 
+  }
+
+  .logo2 h3 {
+      margin-left: 0; 
+  }
+
+  nav ul {
+      display: none; 
+      flex-direction: column; 
+      background-color: #ffa057; 
+      position: absolute; 
+      top: 100%; 
+      left: 0; 
+      width: 100%; 
+      padding: 10px; 
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul.active {
+      display: flex; 
+  }
+
+  nav ul li {
+      margin: 10px 0; 
+  }
+
+  .tombol-menu {
+      display: block;
+  }
+}
