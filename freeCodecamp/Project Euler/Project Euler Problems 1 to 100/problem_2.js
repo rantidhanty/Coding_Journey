@@ -18,3 +18,43 @@ const fiboEvenSum = (n) => {
 };
 
 console.log(fiboEvenSum(34));
+
+/**
+ * problem solve with function recursive
+ *
+ */
+
+function fiboEvenSumWithRecursion(limit) {
+  let fibonacciCache = {}; // Objek untuk menyimpan hasil perhitungan Fibonacci yang sudah dihitung sebelumnya
+
+  function calculateFibonacci(index) {
+    if (fibonacciCache.hasOwnProperty(index)) {
+      // Jika nilai Fibonacci sudah ada di cache, kembalikan nilainya
+      return fibonacciCache[index];
+    }
+    if (index <= 1) {
+      // Basis rekursi: Fibonacci dari 0 adalah 0, dan Fibonacci dari 1 adalah 1
+      return index;
+    }
+    // Hitung nilai Fibonacci secara rekursif, simpan di cache, lalu kembalikan nilainya
+    fibonacciCache[index] =
+      calculateFibonacci(index - 1) + calculateFibonacci(index - 2);
+    return fibonacciCache[index];
+  }
+
+  let currentFibonacci = calculateFibonacci(1); // Nilai Fibonacci pertama
+  let evenFibonacciSum = 0; // Total penjumlahan angka Fibonacci yang genap
+  let currentIndex = 0; // Indeks saat ini dalam perhitungan Fibonacci
+
+  while (currentFibonacci <= limit) {
+    if (currentFibonacci % 2 === 0) {
+      evenFibonacciSum += currentFibonacci;
+      // Tambahkan nilai Fibonacci ke total jika nilainya genap
+    }
+    currentFibonacci = calculateFibonacci(currentIndex++);
+    // Perbarui nilai Fibonacci ke indeks berikutnya
+  }
+  return evenFibonacciSum; // Kembalikan total penjumlahan angka Fibonacci genap
+}
+
+console.log(fiboEvenSumWithRecursion(34));
