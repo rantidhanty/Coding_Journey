@@ -19,12 +19,19 @@ I'm Ramadhanty, an aspiring developer with a passion for coding and problem-solv
 Here are some of the notable projects I've worked on:
 
 **1. FreeCodeCamp Exercises**: A series of coding challenges that helped me master HTML, CSS, and JavaScript fundamentals through interactive lessons and projects.
+
 **2. Dicoding Projects:** Completed various courses on Dicoding, focusing on building responsive web applications and enhancing my frontend development skills.
+
 **3. 2024 Coding Challenge with WPU:** Participated in a coding challenge to solve algorithmic problems, sharpening my problem-solving abilities and coding efficiency.
+
 **4. Frontend Mentor.io Projects:** Developed responsive web designs by tackling challenges from Frontend Mentor, improving my CSS and layout skills.
+
 **5. HackerRank Challenges:** Engaged in coding challenges on HackerRank to practice data structures and algorithms, gaining a deeper understanding of programming concepts.
+
 **6. Logic Practice with JavaScript:** Worked on various logic exercises using JavaScript to enhance my understanding of programming fundamentals and logical thinking.
+
 **7. Bootcamp Review with Phincon Academy:** Reviewed key materials and concepts learned during my bootcamp, consolidating my knowledge and preparing for real-world applications.
+
 **8. Small Projects:** Created several mini-projects to apply new skills in practical scenarios, including simple web applications and utilities.
 
 ## Learning Platforms
