@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+main {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+#change-due {
+  background-color: #e9ecef;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  min-height: 80px;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #495057;
+}
+
+#cash {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.check-btn-styles {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.check-btn-styles:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  border: 2px solid #dee2e6;
+  padding: 15px;
+}
+
+.top-display-screen-container {
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.connector {
+  height: 5px;
+  background-color: #6c757d;
+  margin-top: 10px;
+}
+
+.top-register {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.btns-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  flex: 1;
+}
+
+.btn {
+  background-color: #dee2e6;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ced4da;
+}
+
+.cash-drawer-display {
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 5px;
+  flex: 1;
+  margin-left: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.bottom-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #6c757d;
+  border-radius: 50%;
+}
+
+@media (max-width: 400px) {
+  main {
+    width: 95%;
+    margin: 10px;
+  }
+
+  .top-register {
+    flex-direction: column;
+  }
+
+  .cash-drawer-display {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
