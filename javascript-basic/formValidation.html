@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+
+      input,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      input:focus,
+      button:focus {
+        border-color: #0056b3;
+        outline: none;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+      #error {
+        margin-top: 20px;
+        color: red;
+        font-size: 16px;
+        animation: fadeIn 1s ease-in;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form id="myForm" novalidate>
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter username"
+          required
+        />
+        <input type="email" id="email" placeholder="Enter Email" required />
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter password"
+          required
+        />
+        <button type="submit">Submit</button>
+      </form>
+      <div id="error"></div>
+    </main>
+    <script>
+      document.getElementById("myForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        let errors = [];
+
+        let username = document.getElementById("username").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        if (username.length < 3) {
+          errors.push("username wajib lebih dari 3 karakter");
+        }
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          errors.push("silahkan masukan email yang valid");
+        }
+        if (password.length < 8) {
+          errors.push("password wajib lebih dari 8 karakter");
+        }
+        if (errors.length > 0) {
+          console.log(errors);
+        } else {
+          alert("berhasil");
+          document.getElementById("error").innerHTML = "berhasil";
+        }
+      });
+    </script>
+  </body>
+</html>
