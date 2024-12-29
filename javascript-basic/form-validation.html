@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Buat elemen form
+      const form = document.createElement("form");
+      form.id = "myForm";
+      form.setAttribute("novalidate", "");
+
+      // Buat elemen input untuk username
+      const usernameInput = document.createElement("input");
+      usernameInput.type = "text";
+      usernameInput.id = "username";
+      usernameInput.placeholder = "Enter username";
+      usernameInput.required = true;
+
+      // Buat elemen input untuk email
+      const emailInput = document.createElement("input");
+      emailInput.type = "email";
+      emailInput.id = "email";
+      emailInput.placeholder = "Enter Email";
+      emailInput.required = true;
+
+      // Buat elemen input untuk password
+      const passwordInput = document.createElement("input");
+      passwordInput.type = "password";
+      passwordInput.id = "password";
+      passwordInput.placeholder = "Enter password";
+      passwordInput.required = true;
+
+      // Buat elemen button submit
+      const submitButton = document.createElement("button");
+      submitButton.type = "submit";
+      submitButton.textContent = "Submit";
+
+      // Gabungkan input dan button ke dalam form
+      form.appendChild(usernameInput);
+      form.appendChild(emailInput);
+      form.appendChild(passwordInput);
+      form.appendChild(submitButton);
+
+      // Tambahkan form ke dalam body atau elemen tertentu
+      document.body.appendChild(form);
+
+      // Buat elemen div untuk menampilkan error
+      const errorDiv = document.createElement("div");
+      errorDiv.id = "error";
+      document.body.appendChild(errorDiv);
+
+      // Event listener untuk form submit
+      form.addEventListener("submit", (e) => {
+        e.preventDefault(); // Mencegah form dari pengiriman biasa
+        let errors = [];
+
+        let username = document.getElementById("username").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        // Validasi username
+        if (username.length < 3) {
+          errors.push("Username harus lebih dari 3 karakter");
+        }
+
+        // Validasi email
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          errors.push("Email tidak valid");
+        }
+
+        // Validasi password
+        if (password.length < 8) {
+          errors.push("Password harus lebih dari 8 karakter");
+        }
+
+        // Tampilkan error jika ada
+        if (errors.length > 0) {
+          document.getElementById("error").innerHTML = errors.join("<br>");
+        } else {
+          document.getElementById("error").innerHTML = "Berhasil!";
+        }
+      });
+    </script>
+  </body>
+</html>
