@@ -1,4 +1,4 @@
-var getSmallestString = function (n, k) {
+let getSmallestString = function (n, k) {
   k -= n;
   let alpha = "_bcdefghijklmnopqrstuvwxy_";
   console.log(alpha);
