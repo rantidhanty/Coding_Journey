@@ -40,23 +40,24 @@ class LinkedList {
   }
 
   //menambah elemen di akhir
-  append(data) {
-    const newNode = new Node(data);
-    console.log(newNode);
-
-    //jika linked list masih kosong
-    if (this.head === null) {
-      this.head = newNode;
-      return;
-    }
+  append(...data) {
     let current = this.head;
-    console.log(current);
-
-    //jika linked list tidak kosong
-    while (current.next !== null) {
-      current = current.next;
-    }
-    current.next = newNode; //sambungkan node baru
+    data.forEach(d => {
+      const newNode = new Node(d);
+      console.log(newNode);
+      //jika linked list masih kosong
+      if (this.head === null) {
+        this.head = newNode;
+        return;
+      }
+      //jika linked list tidak kosong
+      current = this.head;
+      while (current.next !== null) {
+        current = current.next;
+      }
+      current.next = newNode; //sambungkan node baru
+    });
+    return this;
   }
 
   //menambah elemen di awal (insert at Head)
