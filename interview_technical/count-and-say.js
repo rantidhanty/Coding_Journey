@@ -10,4 +10,4 @@ const countAndSay = function (n) {
     .reduce((acc, nums) => (acc += `${nums.length}${nums[0]}`), "");
 };
 
-console.log(countAndSay(4));
+console.log(countAndSay(5));

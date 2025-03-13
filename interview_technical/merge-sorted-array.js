@@ -22,3 +22,7 @@ const merge = function (nums1, m, nums2, n) {
   }
 };
 console.log(merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
+const nums1 = [1, 2, 3, 0, 0, 0];
+const nums2 = [2, 5, 6];
+merge(nums1, 3, nums2, 3);
+console.log(nums1);
